@@ -21,12 +21,6 @@
 		<url>http://openmrs.org</url>
 	</organization>
 
-	<scm>
-		<connection>scm:git:git@github.com:h3llborn/openmrs-devel-module-archetype.git</connection>
-		<developerConnection>scm:git:git@github.com:h3llborn/openmrs-devel-module-archetype.git</developerConnection>
-		<url>scm:git:git@github.com:h3llborn/openmrs-devel-module-archetype.git</url>
-	</scm>
-
 	<properties>
 		<openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
 		<h2Version>1.2.135</h2Version>
@@ -72,12 +66,12 @@
 									<destFileName>logic-${logicModuleVersion}.omod</destFileName>
 								</artifactItem>
 							</artifactItems>
-							<outputDirectory>${project.build.directory}/distro</outputDirectory>
+							<outputDirectory>{project.basedir}/openmrs-${openMRSVersion}/modules</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<!-- 
 			
 			We'll configure tomcat7-maven-plugin later down the road to produce a standalone with war and all omods.
@@ -123,8 +117,12 @@
 					<war>${project.build.directory}/distro/openmrs-${openMRSVersion}.war</war>
 					<systemProperties>
 						<systemProperty>
-							<name>installation.script</name>
-							<value>installation.h2.properties</value>
+							<name>OPENMRS_INSTALLATION_SCRIPT</name>
+							<value>classpath:installation.h2.properties</value>
+						</systemProperty>
+						<systemProperty>
+							<name>OPENMRS_APPLICATION_DATA_DIRECTORY</name>
+							<value>${project.basedir}/openmrs-${openMRSVersion}/</value>
 						</systemProperty>
 					</systemProperties>
 				</configuration>

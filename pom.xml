@@ -38,9 +38,4 @@
     </developer>
   </developers>
 
-  <scm>
-    <connection>scm:git:git@github.com:h3llborn/openmrs-devel-module-archetype.git</connection>
-    <developerConnection>scm:git:git@github.com:h3llborn/openmrs-devel-module-archetype.git</developerConnection>
-    <url>scm:git:git@github.com:h3llborn/openmrs-devel-module-archetype.git</url>
-  </scm>
 </project>

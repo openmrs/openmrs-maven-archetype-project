@@ -21,12 +21,6 @@
 		<url>http://openmrs.org</url>
 	</organization>
 
-	<scm>
-	<connection>scm:git:git@github.com/openmrs/openmrs-maven-archetype-project.git</connection>
-    <developerConnection>scm:git:git@github.com/openmrs/openmrs-maven-archetype-project.git</developerConnection>
-    <url>scm:git:git@github.com/openmrs/openmrs-maven-archetype-project.git</url>
-	</scm>
-
 	<properties>
 		<openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
 		<h2Version>1.2.135</h2Version>
@@ -72,37 +66,12 @@
 									<destFileName>logic-${logicModuleVersion}.omod</destFileName>
 								</artifactItem>
 							</artifactItems>
-							<outputDirectory>${project.build.directory}/distro</outputDirectory>
+							<outputDirectory>{project.basedir}/openmrs-${openMRSVersion}/modules</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 
-			<!--
-            Copy all of the modules we depend on (this also gets extra jars we don't need).
-            We'll end up with things like "reporting-omod-0.7.2.1.jar".
-            -->
-			 <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>{project.basedir}/openmrs-${openMRSVersion}/modules</outputDirectory>
-                            <!-- the event module has the non-standard groupId org.openmrs -->
-                            <includeGroupIds>org.openmrs.module,org.openmrs</includeGroupIds>
-                            <excludeTransitive>true</excludeTransitive>
-                        </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
 			<!-- 
 			
 			We'll configure tomcat7-maven-plugin later down the road to produce a standalone with war and all omods.
@@ -148,8 +117,8 @@
 					<war>${project.build.directory}/distro/openmrs-${openMRSVersion}.war</war>
 					<systemProperties>
 						<systemProperty>
-							<name>installation.script</name>
-							<value>installation.h2.properties</value>
+							<name>OPENMRS_INSTALLATION_SCRIPT</name>
+							<value>classpath:installation.h2.properties</value>
 						</systemProperty>
 						<systemProperty>
 							<name>OPENMRS_APPLICATION_DATA_DIRECTORY</name>

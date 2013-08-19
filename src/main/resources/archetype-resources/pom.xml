@@ -6,7 +6,7 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>
 	<packaging>pom</packaging>
-	<name>Module Development Archetype</name>
+	<name>OpenMRS Project Archetype</name>
 	<description>Archetype and scripts used for module development</description>
 	<url>https://wiki.openmrs.org/x/rwBkAg</url>
 	

@@ -47,6 +47,7 @@
 									<artifactId>openmrs-webapp</artifactId>
 									<version>${openMRSVersion}</version>
 									<type>war</type>
+								    <outputDirectory>${project.basedir}/openmrs/${openMRSVersion}</outputDirectory>
 									<destFileName>openmrs-${openMRSVersion}.war</destFileName>
 								</artifactItem>
 								<artifactItem>
@@ -114,7 +115,7 @@
 						<contextPath>/openmrs</contextPath>
 						<extraClasspath>${project.build.directory}/db/h2-${h2Version}.jar</extraClasspath>
 					</webApp>
-					<war>${project.build.directory}/distro/openmrs-${openMRSVersion}.war</war>
+					<war>${project.basedir}/openmrs/${openMRSVersion}/openmrs-${openMRSVersion}.war</war>
 					<systemProperties>
 						<systemProperty>
 							<name>OPENMRS_INSTALLATION_SCRIPT</name>

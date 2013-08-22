@@ -119,17 +119,37 @@
 					<systemProperties>
 						<systemProperty>
 							<name>OPENMRS_INSTALLATION_SCRIPT</name>
-							<value>classpath:installation.h2.properties</value>
+							<value>${openmrs_install_script}</value>
 						</systemProperty>
 						<systemProperty>
 							<name>OPENMRS_APPLICATION_DATA_DIRECTORY</name>
-							<value>${project.basedir}/openmrs-${openMRSVersion}/</value>
+							<value>${openmrs_app_data_dir}</value>
 						</systemProperty>
 					</systemProperties>
 				</configuration>
 			</plugin>
 		</plugins>
     </build>
+
+    <profiles>
+     <profile>
+            <id>install-h2</id>
+            <activation>
+      			<activeByDefault>true</activeByDefault>
+    		</activation>
+            <properties>
+                <openmrs_install_script>classpath:installation.h2.properties</openmrs_install_script>
+                <openmrs_app_data_dir>${project.basedir}/openmrs-${openMRSVersion}/</openmrs_app_data_dir>
+            </properties>
+        </profile>
+     <profile>
+            <id>install-wizard</id>
+            <properties>
+                <openmrs_install_script></openmrs_install_script>
+                <openmrs_app_data_dir>${project.basedir}/openmrs-${openMRSVersion}/</openmrs_app_data_dir>
+            </properties>
+        </profile>
+   </profiles>
 
 	<repositories>
 		<repository>

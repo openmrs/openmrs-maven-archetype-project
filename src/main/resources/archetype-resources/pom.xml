@@ -27,6 +27,27 @@
         <logicModuleVersion>0.5.2</logicModuleVersion>
     </properties>
 
+    <dependencies>
+    	<dependency>
+    		<groupId>org.openmrs.web</groupId>
+			<artifactId>openmrs-webapp</artifactId>
+			<version>${openMRSVersion}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2Version}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>logic-omod</artifactId>
+			<version>${logicModuleVersion}</version>
+			<type>omod</type>
+		</dependency>
+    </dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

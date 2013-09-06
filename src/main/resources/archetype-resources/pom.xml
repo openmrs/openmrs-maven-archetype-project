@@ -6,15 +6,9 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>
 	<packaging>pom</packaging>
-	<name>OpenMRS Project Archetype</name>
-	<description>Archetype and scripts used for module development</description>
+	<name>OpenMRS Project</name>
+	<description>Defines OpenMRS configuration for module development</description>
 	<url>https://wiki.openmrs.org/x/rwBkAg</url>
-	
-	<developers>
-		<developer>
-			<name>h3llborn</name>
-		</developer>
-	</developers>
 	
 	<organization>
 		<name>OpenMRS</name>
@@ -24,7 +18,6 @@
 	<properties>
 		<openMRSVersion>1.9.4-SNAPSHOT</openMRSVersion>
 		<h2Version>1.2.135</h2Version>
-        <logicModuleVersion>0.5.2</logicModuleVersion>
     </properties>
 
 	<build>
@@ -57,14 +50,6 @@
 									<type>jar</type>
 									<outputDirectory>${project.build.directory}/db</outputDirectory>
 									<destFileName>h2-${h2Version}.jar</destFileName>
-								</artifactItem>
-								
-								<artifactItem>
-									<groupId>org.openmrs.module</groupId>
-									<artifactId>logic-omod</artifactId>
-									<version>${logicModuleVersion}</version>
-									<type>omod</type>
-									<destFileName>logic-${logicModuleVersion}.omod</destFileName>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>${project.basedir}/openmrs/${openMRSVersion}/modules</outputDirectory>

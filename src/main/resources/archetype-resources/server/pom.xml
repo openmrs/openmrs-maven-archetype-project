@@ -8,9 +8,9 @@
 		<version>${version}</version>
 	</parent>
 
-	<groupId>${project.parent.groupId}</groupId>
-	<artifactId>${project.parent.artifactId}-server</artifactId>
-	<version>${project.parent.version}</version>
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}-server</artifactId>
+	<version>${version}</version>
 	<packaging>pom</packaging>
 	<name>OpenMRS Server</name>
 

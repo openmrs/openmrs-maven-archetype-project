@@ -48,5 +48,18 @@
 		<developerConnection>scm:git:https://github.com/openmrs/openmrs-maven-archetype-project.git</developerConnection>
 		<url>scm:git:https://github.com/openmrs/openmrs-maven-archetype-project.git</url>
 	</scm>
+	
+	<distributionManagement>
+		<repository>
+			<id>openmrs-repo-releases</id>
+			<name>Releases</name>
+			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>openmrs-repo-snapshots</id>
+			<name>Snapshots</name>
+			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>

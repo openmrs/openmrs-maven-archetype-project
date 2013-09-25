@@ -44,9 +44,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-maven-archetype-project.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-maven-archetype-project.git</developerConnection>
-		<url>scm:git:git@github.com:openmrs/openmrs-maven-archetype-project.git</url>
+		<connection>scm:git:https://github.com:openmrs/openmrs-maven-archetype-project.git</connection>
+		<developerConnection>scm:git:https://github.com:openmrs/openmrs-maven-archetype-project.git</developerConnection>
+		<url>scm:git:https://github.com:openmrs/openmrs-maven-archetype-project.git</url>
 	</scm>
 
 </project>

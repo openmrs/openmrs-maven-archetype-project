@@ -18,7 +18,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
-		<openMRSVersion>LATEST</openMRSVersion>
+		<openMRSVersion>RELEASE</openMRSVersion>
 		<h2Version>1.2.135</h2Version>
 	</properties>
 

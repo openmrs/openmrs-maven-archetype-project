@@ -4,7 +4,7 @@
 
 	<groupId>org.openmrs.maven.archetypes</groupId>
 	<artifactId>maven-archetype-openmrs-project</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>OpenMRS Project Archetype</name>
 	<description>Archetype and scripts used for module development</description>

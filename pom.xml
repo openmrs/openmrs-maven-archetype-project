@@ -52,12 +52,12 @@
 		<repository>
 			<id>openmrs-repo-releases</id>
 			<name>Releases</name>
-			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/releases</url>
+			<url>https://mavenrepo.openmrs.org/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>openmrs-repo-snapshots</id>
 			<name>Snapshots</name>
-			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
+			<url>https://mavenrepo.openmrs.org/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
